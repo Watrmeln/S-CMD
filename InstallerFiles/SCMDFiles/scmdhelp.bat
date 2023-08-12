@@ -18,6 +18,7 @@ echo Tool Pack Commands*
 echo USERTOOL*	Tool that allows you to create and delete users
 echo USER*	Prints the current user's path
 echo TIME*	Displays the current date and time
+echo YTDLPGUI	Opens up a graphical interface for YTDLP, an application that allows you to download videos from the web.
 echo.
 echo *Only availible if you installed tool pack
 @echo on
