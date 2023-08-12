@@ -2,7 +2,7 @@
 title S-CMD Launcher Build 1
 taskkill /IM explorer.exe /F
 
-CSCRIPT //nologo fullscreen.vbs
+CSCRIPT //nologo scmdfullscreen.vbs
 
 :menu
 color 0A
@@ -29,7 +29,7 @@ echo Welcome to the S-CMD Launcher! What would you like to do?
 echo -------------------------------------------0
 echo 1. Launch explorer (default windows shell)
 echo 2. Launch into CMD (Command Prompt)
-echo 3. Launch into CMD as administrator
+echo 3. Restart launcher with administrative permissions (Allows running CMD as administrator)
 echo 4. Power options
 set /p CHOICE="Pick the number corresponding to your choice and press ENTER: "
 
@@ -48,9 +48,42 @@ goto menu
 
 :explorer
 cls
-CSCRIPT //nologo fullscreen.vbs
+CSCRIPT //nologo scmdfullscreen.vbs
 echo Once explorer is open, feel free to close this window!
 explorer.exe
 exit
 
 :cmd
+cls
+color 0F
+echo You are now in command prompt! For help, type either "HELP" or "SCMDHELP"
+cd C:\
+echo -------------------------------------------0
+echo.
+cmd
+
+:cmda
+:: BatchGotAdmin
+:-------------------------------------
+REM  --> Check for permissions
+>nul 2>&1 "net" "session"
+
+REM --> If error flag set, we do not have admin.
+if '%errorlevel%' NEQ '0' (
+    echo Requesting administrative privileges...
+    goto UACPrompt
+) else ( goto gotAdmin )
+
+:UACPrompt
+    echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
+    set params = %*:"=""
+    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+
+    "%temp%\getadmin.vbs"
+    del "%temp%\getadmin.vbs"
+    exit /B
+
+:gotAdmin
+    pushd "%CD%"
+    CD /D "%~dp0"
+:--------------------------------------
