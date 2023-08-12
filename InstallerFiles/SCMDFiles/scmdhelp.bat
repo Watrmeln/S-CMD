@@ -8,7 +8,4 @@ echo USER*	Prints the current user's path
 echo TIME*	Displays the current date and time
 echo.
 echo *only availible if you installed tool pack
-echo.
-echo Games
-echo tba
 @echo on
