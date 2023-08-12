@@ -1,4 +1,4 @@
 @echo off
-echo The current date is %date%
-echo The current time is %time%
+echo Date: %date%
+echo Time: %time%
 @echo on
