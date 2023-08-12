@@ -56,7 +56,7 @@ exit
 :cmd
 cls
 color 0F
-echo You are now in command prompt. For help, type either "HELP" or "SCMDHELP"
+echo You are now in command prompt. For help, type either "HELP" or "SCMDHELP" for S-CMD specific commands.
 cd C:\
 echo -------------------------------------------0
 echo.
