@@ -3,9 +3,17 @@ echo.
 echo SCMDINFO	Shows info about the current build of S-CMD, alongside credits
 echo SCMDPOWER Gives you the option to power off or restart
 echo SCMDLAUNCHER	Returns to the SCMD Launcher
+echo.
+echo sndvol	Opens volume mixer
+echo control	Opens control panel
+echo calc	Opens the calculator app
+echo mspaint	Opens microsoft paint
+echo notepad	Opens microsoft notepad
+echo explorer	Opens up the default windows shell (explorer.exe)
+echo.
 echo USERTOOL*	Tool that allows you to create and delete users
 echo USER*	Prints the current user's path
 echo TIME*	Displays the current date and time
 echo.
-echo *only availible if you installed tool pack
+echo *Only availible if you installed tool pack
 @echo on
