@@ -2,6 +2,7 @@
 
 # S-CMD
 Welcome to S-CMD, this program lets you choose between Explorer and cmd as your shell when you start up your pc, saving you resources and letting you use your pc without explorer, all the way down to Windows XP.
+S-CMD also includes an optional set of command-line tools you can install, giving you even more functionality!
 
 ## Installation
 1. Extract the folder into wherever you want
