@@ -3,4 +3,5 @@ Welcome to S-CMD, this program lets you choose between Explorer and cmd as your 
 
 ## Credits
 Watrmeln - Designer and Text Editor
+<br>
 Disasterocks - Coder and tech genius
