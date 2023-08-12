@@ -29,7 +29,7 @@ echo Welcome to the S-CMD Launcher! What would you like to do?
 echo -------------------------------------------0
 echo 1. Launch explorer (default windows shell)
 echo 2. Launch into CMD (Command Prompt)
-echo 3. Restart launcher with administrative permissions (Allows running CMD as administrator)
+echo 3. Restart launcher with admin (Allows running CMD as administrator)
 echo 4. Power options
 set /p CHOICE="Pick the number corresponding to your choice and press ENTER: "
 
@@ -42,21 +42,21 @@ ELSE GOTO invalid
 :invalid
 color C
 cls
-echo The option you chose was invalid! Please try again.
+echo Your Choice was Invalid. Please choose between the options above.
 pause
 goto menu
 
 :explorer
 cls
 CSCRIPT //nologo scmdfullscreen.vbs
-echo Once explorer is open, feel free to close this window!
+echo Close this window once explorer launches.
 explorer.exe
 exit
 
 :cmd
 cls
 color 0F
-echo You are now in command prompt! For help, type either "HELP" or "SCMDHELP"
+echo You are now in command prompt. For help, type either "HELP" or "SCMDHELP"
 cd C:\
 echo -------------------------------------------0
 echo.
@@ -70,7 +70,7 @@ REM  --> Check for permissions
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
-    echo Requesting administrative privileges...
+    echo Press Yes on the promp that appears.
     goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -87,3 +87,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
+
+:power
+cls
+scmdpower.bat
