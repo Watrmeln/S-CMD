@@ -22,6 +22,10 @@ IF %M%==4 GOTO REMOVEADMIN
 IF %M%==5 GOTO DISPLAY
 IF %M%==6 GOTO EXIT
 
+:EXIT
+@echo on
+exit
+
 :CREATEUSER
 cls
 echo Welcome to the create user wizard!
