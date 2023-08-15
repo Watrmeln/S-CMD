@@ -21,10 +21,17 @@ IF %M%==3 GOTO REMOVEUSER
 IF %M%==4 GOTO REMOVEADMIN
 IF %M%==5 GOTO DISPLAY
 IF %M%==6 GOTO EXIT
+ELSE GOTO INVALID
+
+:INVALID
+echo Please select a valid number.
+pause
+goto MENU
 
 :EXIT
 @echo on
-exit
+cls
+cmd
 
 :CREATEUSER
 cls
