@@ -6,10 +6,11 @@ S-CMD also includes an optional set of command-line tools you can install, givin
 ### .net 4.0 IS REQUIRED TO INSTALL!
 
 ## Installation
-1. Extract the folder into wherever you want
-2. Run the installer as an admin
-3. Follow the instructions to install S-CMD
-4. Reboot!
+1. Download S-CMD.zip from the repo files
+2. Extract the folder into wherever you want
+3. Run the installer as an admin
+4. Follow the instructions to install S-CMD
+5. Reboot!
 
 ## Credits
 Watrmeln - Designer and Text Editor
