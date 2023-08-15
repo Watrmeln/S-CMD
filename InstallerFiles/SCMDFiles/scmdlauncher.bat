@@ -2,8 +2,6 @@
 title S-CMD Launcher Build 1
 taskkill /IM explorer.exe /F
 
-CSCRIPT //nologo scmdfullscreen.vbs
-
 :menu
 color 0A
 cls
@@ -22,7 +20,7 @@ echo       :+++++++++==++++++++:
 echo         .-+++++++++++++-.         
 echo             .:-----:.
 echo -------------------------------------------0
-echo S-CMD LAUNCHER         BUILD 1 - AUG 12 2023
+echo S-CMD LAUNCHER         BUILD 2 - AUG 15 2023
 echo -------------------------------------------0
 echo.
 echo Welcome to the S-CMD Launcher! What would you like to do?
@@ -48,7 +46,6 @@ goto menu
 
 :explorer
 cls
-CSCRIPT //nologo scmdfullscreen.vbs
 echo Close this window once explorer launches.
 explorer.exe
 exit
