@@ -1,5 +1,5 @@
 @echo off
-title S-CMD Launcher Build 1
+title S-CMD Launcher Build 2
 taskkill /IM explorer.exe /F
 
 :menu
