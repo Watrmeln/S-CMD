@@ -5,7 +5,7 @@ Welcome to Startup-CMD, this program lets you choose between Explorer and cmd as
 S-CMD also includes an optional set of command-line tools you can install, giving you even more functionality!
 
 Site: https://scmd.carrd.co/#
-### .net 4.0 IS REQUIRED TO INSTALL!
+### .net 4.6 IS REQUIRED TO INSTALL!
 
 ## Installation
 1. Download S-CMD.zip from the repo files
